@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Polja</title>
+</head>
+<body>
+ <script type="text/javascript">
+    let Polje = [1, 2, 3, 4, 7, 8, 5, 6, 9, 55, 12, 4.85];
+
+    document.write("Duljina: " + Polje.length + "<br>");
+
+    let PoljeDesc = [...Polje].sort((a, b) => b - a);
+    document.write("Sortirano silazno: " + PoljeDesc.join(", ") + "<br>");
+
+    let PoljeAsc = [...Polje].sort((a, b) => a - b);
+    document.write("Sortirano uzlazno: " + PoljeAsc.join(", ") + "<br>");
+
+    PoljeAsc.pop();
+    PoljeAsc.pop();
+
+    PoljeAsc.push(19, 22);
+
+    document.write("Polje update: " + PoljeAsc.join(", ") + "<br>");
+
+    let Polje2 = ['Banana', 'Orange', 'Apple', 'Mango'];
+    let PoljeFinal = PoljeAsc.concat(Polje2);
+    document.write("Spojeno polje: " + PoljeFinal.join(", ") + "<br>");
+ </script>
+</body>
+</html>

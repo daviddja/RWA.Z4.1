@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Prosti brojevi</title>
+</head>
+<body>
+ <script type="text/javascript">
+    let i = 1;
+    let j = 1;
+    let prostiBrojevi = [];
+
+    while (i <= 1000) {
+        let jeProsti = true;
+        j = 2;
+        while (j < i) {
+            if (i % j === 0) {
+                jeProsti = false;
+                break;
+            }
+            j++;
+        }
+        if (jeProsti && i > 1) {
+            prostiBrojevi.push(i);
+        }
+        i++;
+    }
+
+    document.write("Prosti brojevi do 1000:<br> " + prostiBrojevi.join("<br>"));
+    console.log("Prosti brojevi do 1000:", prostiBrojevi);
+ </script>
+</body>
+</html>

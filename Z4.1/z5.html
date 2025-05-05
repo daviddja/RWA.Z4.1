@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+ <meta charset="UTF-8" />
+ <title>Objekti i petlje</title>
+</head>
+<body>
+ <script type="text/javascript">
+    let osoba1 = {
+        firstName: "Marko",
+        lastName: "Markic",
+        age: 20,
+        eyeColor: "black"
+    };
+
+    let osoba2 = {
+        firstName: "Ivana",
+        lastName: "Radic",
+        age: 24,
+        eyeColor: "green"
+    };
+
+    let osoba3 = {
+        firstName: "Petar",
+        lastName: "Kvasina",
+        age: 28,
+        eyeColor: "brown"
+    };
+
+    let osoba4 = {
+        firstName: "Ana",
+        lastName: "Anic",
+        age: 45,
+        eyeColor: "brown"
+    };
+
+    let osobe = [osoba1, osoba2, osoba3, osoba4];
+
+    for (let i = 0; i < osobe.length; i++) {
+        document.write("Osoba " + (i + 1) + "<br>");
+        for (let index in osobe[i]) {
+            document.write(index + ": " + osobe[i][index] + "<br>");
+        }
+        document.write("<br>");
+    }
+ </script>
+</body>
+</html>
